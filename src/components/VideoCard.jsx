@@ -29,10 +29,9 @@ const getEmbedUrl = (link) => {
 const VideoCard = ({ imageUrl, imageAlt, title, channel, description, videoLink }) => {
 
   // 1. Process the incoming link to get the reliable embed URL
-  console.log("Original Video Link:", videoLink);
+ 
   const actualVideoLink = getEmbedUrl(videoLink);
-  console.log("Processed Video Link:", actualVideoLink);
-  console.log("Processed Video Link:", actualVideoLink);
+ 
   // 2. Check if the processed link can be embedded
   // We only embed if the link is specifically a YouTube embed link
   const isEmbedLink = actualVideoLink && actualVideoLink.includes('youtube.com/embed/');
@@ -84,31 +83,3 @@ const VideoCard = ({ imageUrl, imageAlt, title, channel, description, videoLink 
 };
 
 export default VideoCard;
-
-
-
-// return (
-//     <div className="text-white flex flex-col px-6 md:px-12 space-y-10">
-//       {data.map((video) => (
-//         <div
-//           key={video.id}
-//           className="flex flex-col md:flex-row items-start md:items-center gap-6 border-b border-gray-700 pb-8"
-//         >
-//           <iframe
-//             className="w-full md:w-1/2 aspect-video rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
-//             src={`https://www.youtube.com/embed/${video.key}`}
-//             title={video.name}
-//             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-//             allowFullScreen
-//           />
-//           <div className="w-full md:w-1/2">
-//             <h3 className="text-xl md:text-2xl font-semibold mb-2">{video.name}</h3>
-//             <p className="text-sm text-gray-400">Type: {video.type} | Site: {video.site}</p>
-//           </div>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default MovieVideos;

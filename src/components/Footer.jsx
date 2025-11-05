@@ -12,8 +12,19 @@ const Footer = () => (
       <p className="mb-4">
         Creative recycling projects and DIY ideas to help you reduce waste and save money.
       </p>
-      <p className="text-sm">
+      <p className="text-sm mb-2">
         &copy; {new Date().getFullYear()} WasteNot Creations. All rights reserved.
+      </p>
+      <p className="text-sm">
+        Developed by{' '}
+        <a
+          href="https://github.com/Param-gupta03"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-green-400 hover:underline"
+        >
+          Param Gupta
+        </a>
       </p>
     </div>
   </footer>

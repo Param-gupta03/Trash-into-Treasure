@@ -12,9 +12,9 @@ export const fetchImageAnalysis = async (base64ImageData, mimeType) => {
   const GEMINI_API_KEY = import.meta.env.VITE_APIKEY_GOOGLE;
   const YOUTUBE_API_KEY = import.meta.env.VITE_API_YOUTUBE;
 
-  const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
+  const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
 
-  // --- Step 1: Ask Gemini to identify the waste item ---
+
   const identifyPrompt = `
 Analyze this image and identify the waste item shown.
 Respond ONLY in raw JSON like:
